@@ -1,0 +1,245 @@
+.open-modal{
+    height:100%;
+    overflow:hidden;
+}
+.open-modal .modal{
+    display: block;
+}
+.modal{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 100;
+    opacity:0;
+    display: none;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-inr{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:960px;
+    height:auto;
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+}
+.modal-inr::before{
+    content: '';
+    position: relative;
+    display: block;
+    width:100%;
+    height:auto;
+    padding-top:56.25%;
+}
+.modal-inr iframe{
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    border:1px solid #fff;
+    box-shadow:0 0 3px #fff;
+}
+.close-modal{
+    position: absolute;
+    right:-70px;
+    top:-20px;
+    width:60px;
+    height:60px;
+    background: url(../images/close.png) no-repeat center center;
+    background-size:cover;
+    cursor: pointer;
+}
+
+
+
+/* Popup overlay */
+.popup-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.9);
+    z-index: 50;
+    text-align: center;
+    display: none;
+}
+.popup-overlay::after, .popup-overlay::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+}
+.popup-inr {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    height: auto;
+    max-width: 1328px;
+    max-height: 90vh;
+    background-color: #fff;
+    text-align: left;
+
+}
+.close-but{
+    position: absolute;
+    left: 3.313%;
+    top: 3.237%;
+    width: 39px;
+    line-height: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.close-but img {
+    width: 100%;
+}
+
+
+/* Popup News */
+.news-content-box{
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 10.5421% auto 4.5180% auto;
+    padding: 0 15.8132% 0 11.445%;
+    overflow: hidden;
+    max-height: 70vh;
+}
+.news-content-inr{
+    position: relative;
+    display: block;
+}
+.news-pic{
+    position: relative;
+    display: block;
+    line-height: 0;
+    margin-bottom: 3.2rem;
+}
+.news-pic img{
+    width: 100%;
+}
+.news-content-box h2{
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.news-content-box .date{
+    position: relative;
+    margin-bottom: 4rem;
+}
+.news-content-box p{
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+.news-content-box .date, 
+.news-content-box p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+}
+.nicescroll-rails{
+    margin-left: -4.8rem;
+}
+
+@media screen and (min-width:1101px) and (max-height:800px){
+    .news-content-box{
+        max-height: 60vh;
+    }
+}
+@media screen and (min-width:1101px) and (max-height:720px){
+
+ }
+@media screen and (min-width:1101px) and (max-height:640px){ 
+
+}
+
+
+@media screen and (max-width: 1100px){
+
+    .modal-inr {
+        width:90%;
+    }
+    .close-modal {
+        right:-15px;
+        top:-40px;
+        width:40px;
+        height:40px;
+        background-size:40px auto;
+    }
+
+
+
+    /* overlay */
+    .popup-inr.news-popup{
+        width: 90.37%;
+        /* max-height: 80vh; */
+    }
+    .news-content-box{
+        margin: 10.1851vw 0 7.407vw 0;
+        padding: 0 14.444444vw 0 10.1851vw;
+
+    }
+    .news-popup .close-but{
+        top: 2.962962vw;
+        left: 2.962962vw;
+        width: 30px;
+    }
+    .news-pic{
+        margin-bottom: 2.7777vw;
+    }
+    .news-content-box h2{
+        font-size: 3.333vw;
+        margin-bottom: 2.129vw;
+    }
+    .news-content-box .date{
+        font-size: 2.2222vw;
+        margin-bottom: 4.44444vw;
+    }
+    .news-content-box p{
+        font-size: 2.592vw;
+        margin-bottom: 2.3148vw;
+    }
+    .nicescroll-rails{
+        margin-left: -3.3vw;
+    }
+
+}
+@media screen and (max-width:840px) and (orientation: landscape) {
+    .news-content-box{
+        margin: 5vw 0 6vw 0;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .news-popup .close-but{
+        width: 18px;
+    }
+    .news-content-box h2{
+        font-size: 15px;
+    }
+    .news-content-box .date, .news-content-box p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 390px){
+
+}
